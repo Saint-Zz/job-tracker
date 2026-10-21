@@ -52,17 +52,7 @@ DB_PASSWORD=与MYSQL_PASSWORD保持一致
 
 ## 数据说明
 
-投递记录、账号和上传的简历保存在 MySQL 数据卷中，不会随源代码提交到 GitHub。生产部署前应配置自动备份、HTTPS、访问日志保护和文件安全扫描。
+投递记录、账号和上传的简历保存在本地 MySQL 数据卷中。
 
-## 公开仓库安全检查
 
-提交前运行：
-
-```powershell
-git status --short
-git check-ignore .env
-git grep -n -I -E "password|secret|token|api[_-]?key"
-```
-
-确认 `.env` 显示为被忽略，并人工检查搜索结果中没有真实凭据。公开仓库只应包含 `.env.example`。
 
