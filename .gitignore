@@ -1,0 +1,29 @@
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# User data and backups
+uploads/
+data/
+backups/
+*.sql
+
+# Generated and temporary files
+.artifact-runtime/
+.doc-work/
+.skill-install-source/
+outputs/
+tmp/
+temp/
+
+# Logs and unrelated local maintenance artifacts
+*.log
+vmware*.txt
+scripts/*vmware*.ps1
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
